@@ -287,9 +287,11 @@ const Footer = () => {
 }
 
 
-const SocialShare = ({title}) => {
-  const url =window.location.href
-  const twitter_url = `https://twitter.com/intent/tweet?text=${title}&url=${url}`
+const SocialShare = ({title, slug}) => {
+  const twitter_url = "https://twitter.com/intent/tweet?" + encodeURI(`text=${title}&url=https://
+  thedailywave.com/${slug}`)
+  
+
   return <div className="entry__share">
     <div className="sticky-col">
       <div className="socials socials--rounded socials--large">

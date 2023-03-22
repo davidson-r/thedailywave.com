@@ -9,6 +9,7 @@ export default function BlogPostTemplate({
   const { markdownRemark, next, previous } = data
   const { frontmatter, html } = markdownRemark
   const {title, date}=frontmatter
+  const {slug} = markdownRemark.fields
   return (
 
     <Layout>
@@ -60,7 +61,7 @@ export default function BlogPostTemplate({
 
                 <div className="entry__article-wrap">
 
-                  <SocialShare title={title} />
+                  <SocialShare title={title} slug={slug}/>
                   <div className="entry__article">
                     <div
                       dangerouslySetInnerHTML={{ __html: html }}
@@ -151,6 +152,9 @@ export const pageQuery = graphql`
     $nextPostId: String) {
     markdownRemark(id: { eq: $id }) {
       html
+      fields{
+        slug
+      }
       frontmatter {
         date(formatString: "MMMM DD, YYYY")
         title

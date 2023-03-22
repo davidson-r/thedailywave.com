@@ -1,1 +1,1 @@
-![Live](thedailywave.com)
+![Live](www.thedailywave.com)

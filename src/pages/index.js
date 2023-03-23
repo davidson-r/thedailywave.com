@@ -1,6 +1,7 @@
 import * as React from 'react'
 import { graphql } from 'gatsby'
 import { Layout } from "../components/layout"
+import SEO from "../components/seo"
 
 
 const HomePage = ({data}) => {
@@ -70,6 +71,12 @@ const NewsCard = ({news}) => {
     </article>
   </div>
 }
+
+export const Head = ({ data }) => (
+  <SEO description={data.markdownRemark.frontmatter.description}
+    title={data.markdownRemark.frontmatter.title}
+    twitterImage={data.markdownRemark.frontmatter.featuredImage.publicURL} />
+)
 
 export const query = graphql`
 query HomePageQuery {

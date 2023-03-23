@@ -34,7 +34,7 @@ const SEO = ({ description, title, children, twitterImage }) => {
 
   return (
     <>
-      <title>{defaultTitle ? `${title} | ${defaultTitle}` : title}</title>
+      <title>{defaultTitle && title ? `${title} | ${defaultTitle}` : title ? title : defaultTitle}</title>
       <meta name="description" content={metaDescription} />
       <meta property="og:title" content={title} />
       <meta property="og:description" content={metaDescription} />

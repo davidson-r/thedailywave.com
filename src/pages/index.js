@@ -73,9 +73,7 @@ const NewsCard = ({news}) => {
 }
 
 export const Head = ({ data }) => (
-  <SEO description={data.markdownRemark.frontmatter.description}
-    title={data.markdownRemark.frontmatter.title}
-    twitterImage={data.markdownRemark.frontmatter.featuredImage.publicURL} />
+  <SEO />
 )
 
 export const query = graphql`

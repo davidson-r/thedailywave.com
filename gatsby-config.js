@@ -4,9 +4,9 @@
 module.exports = {
   pathPrefix: "/thedailywave",
   siteMetadata: {
-    title: `Citadel Journal`,
+    title: `The Daily Wave`,
     siteUrl: `https://www.thedailywave.com`,
-    description: "Welcome to Citadel Journal, your go-to source for up-to-the-minute news and analysis on the most pressing issues of the day.",
+    description: "Welcome to the Daily Wave, your go-to source for up-to-the-minute news and analysis on the most pressing issues of the day.",
     social: { twitter: "@TheDailyWavecom" }
   },
   plugins: [
@@ -45,8 +45,9 @@ module.exports = {
       resolve: `gatsby-plugin-google-gtag`,
       options: {
         trackingIds: [
-          "359957886",
+          "G-3FL8NMDW0N",
         ],
+        
       },
     }
   ]

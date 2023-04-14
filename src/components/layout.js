@@ -158,7 +158,7 @@ const NavCategories = ["Home","Latest","World","Local","Business","Politics","Sp
 const NavBar = ({ toggle, setToggle }) => {
   return <header className="nav">
 
-    <div className="nav__holder nav--sticky">
+    <div className="nav__holder nav--sticky" style={{'width':'100%'}}>
       <div className="container relative">
         <div className="flex-parent">
 
